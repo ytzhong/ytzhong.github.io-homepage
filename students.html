@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>=Mentoring — Tianzhong Yang</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <a class="brand" href="index.html">T. YANG</a>
+    <ul class="navlinks">
+      <li><a href="index.html">Bio</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="students.html" class="active">Mentoring</a></li>
+      <li><a href="julia-marie-janes.html">Julia Marie Janes</a></li>
+      <li><a href="news.html">News</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="wrap">
+
+  <div class="pagehead">
+    <h1 class="pagetitle">Students</h1>
+  </div>
+
+  <section style="border-top:none;">
+    <h2>Current dissertation or Plan B advisees</h2>
+
+    <!--
+      TEMPLATE: duplicate the .person block below for each student.
+      Fill in name, program/year, and a short line about their focus.
+    -->
+    <div class="people-grid">
+      <div class="person">
+        <img src="images/Josey_photo.png" alt="Josey Sorenson">
+        <h3>Josey Sorenson</h3>
+        <p> Biostatistics PhD student  &middot; Work on high-dimensional mediation analysis</p>
+      </div>
+
+      <div class="person">
+        <div class="avatar-placeholder">JH</div>
+        <h3>Joshua Hebeisen</h3>
+        <p> Biostatistics MS student   &middot; Work on batch effect correction for single cell data</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Past mentees</h2>
+    <div class="people-grid">
+      <div class="person">
+        <img src="images/Rui_photo.png" alt="Rui Cao">
+        <h3>Rui Cao, PhD</h3>
+        <p> Biostatistics &middot; Graduated at Year 2025 (DDF recipient)  &middot; Biostatistician at Novartis </p>
+        <p> co-mentor with Dr. Weihua Guan </p>
+      </div>
+
+      <div class="person">
+        <img src="images/Zhiyu_photo.png" alt="Zhiyu Kang">
+        <h3>Zhiyu Kang, PhD</h3>
+        <p> Biostatistics &middot; Graduated at Year 2026   &middot; Data Scientist at Google </p>
+        <p> co-mentor with Dr. Eric Lock </p>
+      </div>
+    </div>
+
+  </section>
+
+</main>
+
+<footer class="wrap">
+  <span>&copy; <span id="year"></span> Tianzhong Yang</span>
+  <span>University of Minnesota &middot; School of Public Health</span>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+
+</body>
+</html>
