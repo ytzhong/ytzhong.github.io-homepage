@@ -209,12 +209,12 @@ footer{
   border:1px solid var(--line);
 }
 
-
-@media (max-width: 600px) {
-  .nav {
-    gap: 0.5rem 0.9rem;
-    font-size: 0.9rem;
-    letter-spacing: 0.02em;
-  }
-  .nav a { white-space: nowrap; }  /* keep "Team Science" from splitting mid-phrase */
+.nav {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;          /* Firefox */
 }
+.nav::-webkit-scrollbar { display: none; }
+.nav a { white-space: nowrap; flex: 0 0 auto; }
