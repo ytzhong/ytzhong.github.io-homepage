@@ -209,12 +209,48 @@ footer{
   border:1px solid var(--line);
 }
 
-.nav {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;          /* Firefox */
+/* ============================================================
+   MOBILE ADJUSTMENTS
+   Keep this block LAST in the file — later rules win ties.
+   ============================================================ */
+
+/* --- tablet & down: nav stacks, split layouts collapse --- */
+@media (max-width:760px){
+
+  /* nav: brand on its own row, links wrap underneath */
+  nav.wrap{
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    gap:10px;
+    padding-top:14px;padding-bottom:14px;
+  }
+  .navlinks{
+    width:100%;
+    gap:10px 18px;
+  }
+  .navlinks a{font-size:12px;padding-bottom:1px;}
+
+  /* photo above text, text below */
+  .split-grid{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .split-grid img{
+    order:-1;              /* moves photo to the top regardless of HTML order */
+    max-width:200px;
+    margin:0 auto;
+    display:block;
+  }
+
+  .pagehead{padding:44px 0 30px;}
 }
-.nav::-webkit-scrollbar { display: none; }
-.nav a { white-space: nowrap; flex: 0 0 auto; }
+
+/* --- phones: tighten gutters and type --- */
+@media (max-width:430px){
+  .wrap{padding:0 18px;}
+  .navlinks{gap:9px 14px;}
+  .navlinks a{font-size:11.5px;letter-spacing:0;}
+  .brand{font-size:12px;}
+  .split-grid img{max-width:170px;}
+  .placeholder{padding:22px 18px;}
+}
